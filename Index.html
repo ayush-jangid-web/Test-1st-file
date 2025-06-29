@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container{
+display: flex;
+
+}
+.static-txt{
+    margin-top: -17px;
+    font-size: 60px;
+    font-family: 'poppins';
+    font-weight:500;
+    color: white;
+}
+.dynamic-txt{
+    /* background-color: red; */
+    line-height: 60px;
+    margin-left: 15px;
+    height: 60px;
+    overflow: hidden;
+}
+.dynamic-txt ul {
+    font-family: "Press Start 2P", system-ui;
+    color: #26ff00;
+    font-weight: 400;
+    font-style: normal;
+}
+.dynamic-txt li {
+    list-style: none;
+    font-size: 50px;
+    position: relative;
+    top: 0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+}
+.dynamic-txt li:nth-child(1) {
+    color: #ddff00;
+}
+.dynamic-txt li:nth-child(2) {
+    color: rgb(34, 255, 0);
+}
+.dynamic-txt li:nth-child(3) {
+    color: rgb(136, 0, 255);
+}
+.dynamic-txt li:nth-child(4) {
+    color: rgb(255, 0, 0);
+}
+
+
+.dynamic-txt li::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 4px solid #ffffff;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    animation: typing 3s steps(9) infinite ;
+}
+@keyframes typing{
+    40%,
+    60%{
+        left:calc(100% + 5px);
+    }
+    100%{
+        left:0;
+    }
+}
+@keyframes slide {
+    100%{
+        top: -240px;
+    }
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="static-txt">I'm</div>
+        <div class="dynamic-txt">
+            <ul>
+                <li><span>Developer</span></li>
+                <li><span>Programer</span></li>
+                <li><span>Designer</span></li>
+                <li><span>Editer</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
